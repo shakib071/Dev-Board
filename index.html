@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Board</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style/style.css">
+
+       <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
 </head>
-<body>
-    <h1>hello</h1>
+<body >
+    
+    <header class="bg-[#F4F7FF] pt-4 pb-4">
+        <nav class="flex justify-between items-center p-7 bg-white rounded-lg w-[95%] mx-auto ">
+          
+            <div class="flex items-center">
+                <img class="mr-2" src="assets/logo.png" alt="Logo">
+                <h4 class="text-4xl">Dev<span class="font-bold">Board</span></h4>
+            </div>
+            <div class="flex items-center ">
+                <img class="mr-3" src="assets/checkbox.png" alt="checkbox image">
+                <p class="text-3xl mr-9 font-bold">23</p>
+                <img src="assets/theme-btn.png" alt="theme button image">
+
+            </div>
+            
+        </nav>
+    </header>
+
+
+    <main>
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+
+
 </body>
 </html>
