@@ -30,18 +30,20 @@ function cardBtn(id) {
         // History section update
 
         //parent div
-            let historyDiv = document.getElementById('history');
-            console.log(historyDiv);
+
+        let historyDiv = document.getElementById('history');
+        console.log(historyDiv);
 
         //child paragraph 
-            let historyChild = document.createElement('p');
-            historyChild.classList.add('mb-5', 'bg-[#F4F7FF]', 'rounded-xl' , 'p-2')
-            
-            historyChild.innerText = 'You have Complete The Task Add Dark Mode at 12:48:15 PM';
-            historyDiv.appendChild(historyChild);
+
+        let historyChild = document.createElement('p');
+        historyChild.classList.add('mb-5', 'bg-[#F4F7FF]', 'rounded-xl' , 'p-2')
+        
+        historyChild.innerText = 'You have Complete The Task Add Dark Mode at 12:48:15 PM';
+        historyDiv.appendChild(historyChild);
 
 
-
+        
 
         
     

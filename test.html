@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="dateTime"></div> <!-- Where the date and time will be displayed -->
-
+    <button id="myButton" onclick="disableButton()">Click Me</button>
     <script>
         
         function updateDateTime() {
@@ -36,6 +36,19 @@
         
         // Initial display
         updateDateTime();
+
+
+        const button = document.getElementById('myButton');
+        
+        // Disable the button
+        button.addEventListener('click', function() {
+            button.disabled = true;
+        });
+        
+
+        // Optionally, change the text of the button to indicate it's disabled
+        button.innerText = 'Button Disabled';
+    
     </script>
 </body>
 </html>
