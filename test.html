@@ -1,26 +1,41 @@
-<div class="card">
-    <button class="alert-btn">Button 1</button>
-</div>
-<div class="card">
-    <button class="alert-btn">Button 2</button>
-</div>
-<div class="card">
-    <button class="alert-btn">Button 3</button>
-</div>
-<a href="https://example.com" id="myLink">Click me</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Clock with Date</title>
+</head>
+<body>
+    <div id="dateTime"></div> <!-- Where the date and time will be displayed -->
 
-<script>
-    document.querySelectorAll('.alert-btn').forEach(button => {
-        button.addEventListener('click', (event) => {
-            alert('Button clicked!');
-            console.log(event.target.innerText); // Logs the button text
-        });
-    });
+    <script>
+        
+        function updateDateTime() {
+            // Get current date and time
+            const now = new Date();
 
-  
-    document.getElementById('myLink').addEventListener('click', function(event) {
-        // event.preventDefault();  // Prevents navigating to the link
-        alert('Link click prevented!');
-    });
+            // Format time as HH:MM:SS
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
 
-</script>
+            // Get current date in format: Day, Month DD, YYYY
+            const day = now.toLocaleString('en-us', { weekday: 'long' });
+            const month = now.toLocaleString('en-us', { month: 'long' });
+            const date = now.getDate();
+            const year = now.getFullYear();
+            const dateString = `${day}, ${month} ${date}, ${year}`;
+
+            // Display both date and time inside the 'dateTime' div
+            document.getElementById('dateTime').innerText = `${dateString} - ${timeString}`;
+        }
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+        
+        // Initial display
+        updateDateTime();
+    </script>
+</body>
+</html>
