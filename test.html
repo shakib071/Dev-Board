@@ -1,0 +1,26 @@
+<div class="card">
+    <button class="alert-btn">Button 1</button>
+</div>
+<div class="card">
+    <button class="alert-btn">Button 2</button>
+</div>
+<div class="card">
+    <button class="alert-btn">Button 3</button>
+</div>
+<a href="https://example.com" id="myLink">Click me</a>
+
+<script>
+    document.querySelectorAll('.alert-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            alert('Button clicked!');
+            console.log(event.target.innerText); // Logs the button text
+        });
+    });
+
+  
+    document.getElementById('myLink').addEventListener('click', function(event) {
+        // event.preventDefault();  // Prevents navigating to the link
+        alert('Link click prevented!');
+    });
+
+</script>
