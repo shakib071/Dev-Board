@@ -1,3 +1,27 @@
+
+
+//random baground color 
+
+document.getElementById('random-bg-color').addEventListener('click',
+    function (){
+        let color = randomRGBcolor();
+
+        console.log(color);
+
+        //header section color change
+        document.getElementById('header').classList.add(`bg-[${color}]`);
+
+        //main section color change
+
+        document.getElementById('main-section').classList.add(`bg-[${color}]`);
+
+      
+        
+    }
+);
+
+
+
 //divcover to blog page navigation 
 
 document.getElementById('discover').addEventListener('click',
@@ -27,3 +51,7 @@ document.getElementById('clear-history').addEventListener('click',
         document.getElementById('history').innerHTML = '';
     }
 );
+
+
+
+

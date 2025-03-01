@@ -8,7 +8,7 @@ function cardBtn(id) {
     document.getElementById(id).addEventListener('click', function (event) {
 
         event.preventDefault();//prevent the default action of the form ie default reload
-    
+        alert('Task Completed');
         //task assaign section update
         let taskAssaign = document.getElementById('task_assigned');
         
@@ -45,8 +45,26 @@ function cardBtn(id) {
 
         
 
+        //disable the button
+
+        document.getElementById(id).disabled = true;
+        document.getElementById(id).classList.add('bg-gray-300');
+
+
         
     
     });
     
 }
+
+
+// random color generator
+
+function randomRGBcolor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+    return `rgb(${r},${g},${b})`;
+}
+

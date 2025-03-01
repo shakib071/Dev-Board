@@ -38,16 +38,17 @@
         updateDateTime();
 
 
-        const button = document.getElementById('myButton');
+        const btn = document.getElementById('myButton');
         
         // Disable the button
-        button.addEventListener('click', function() {
-            button.disabled = true;
+        btn.addEventListener('click', function() {
+            btn.disabled = true;
+            btn.innerText = 'Button Disabled';
         });
         
 
         // Optionally, change the text of the button to indicate it's disabled
-        button.innerText = 'Button Disabled';
+       
     
     </script>
 </body>
