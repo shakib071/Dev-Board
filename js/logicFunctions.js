@@ -119,7 +119,7 @@ function cardBtn(id,titleid) {
         
         //get current time
         let time = currentTime();
-        console.log(title, time);
+        
         
         historyChild.innerText = `You have Complete The Task ${title} at ${time}`;
         historyDiv.appendChild(historyChild);
@@ -132,8 +132,11 @@ function cardBtn(id,titleid) {
         document.getElementById(id).disabled = true;
         document.getElementById(id).classList.add('bg-gray-300');
 
+        //all task done alert message
 
-        
+        if(taskAssaignValueInt === 0){
+            alert('Congratulations! you have completed all the current task');
+        }
     
     });
     
