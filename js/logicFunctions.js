@@ -41,6 +41,40 @@ function currentTime() {
 
 
 
+//real date function
+
+function currentDate() {
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() ;
+    let year = date.getFullYear();
+
+    //day name
+
+    let dayNameList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let currentDayName = dayNameList[date.getDay()];
+    
+    let monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October'
+                    ,'November', 'December'];
+    let currentMonth = monthList[month];
+    
+
+
+    return {
+            currentDayName : currentDayName,
+            day : day,
+            month : currentMonth,
+            year : year
+        }
+
+}
+
+
+
+
+
+
+
 
 // card section 
 
@@ -49,7 +83,7 @@ function cardBtn(id,titleid) {
     document.getElementById(id).addEventListener('click', function (event) {
 
         event.preventDefault();//prevent the default action of the form ie default reload
-        alert('Task Completed');
+        alert('Board updated successfully');
         //task assaign section update
         let taskAssaign = document.getElementById('task_assigned');
         
@@ -114,6 +148,19 @@ function randomRGBcolor() {
     let b = Math.floor(Math.random() * 256);
 
     return `rgb(${r},${g},${b})`;
+}
+
+
+//day and date in main section
+
+function dayAndDate() {
+
+    let curDate = currentDate();
+    
+
+    document.getElementById('day-name').innerText = curDate.currentDayName;
+    document.getElementById('date').innerText = `${curDate.month} ${curDate.day}, ${curDate.year}`;
+
 }
 
 

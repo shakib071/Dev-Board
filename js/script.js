@@ -53,5 +53,10 @@ document.getElementById('clear-history').addEventListener('click',
 );
 
 
+// day and date in main section 
+
+dayAndDate();
+setInterval(dayAndDate, 60000);
+
 
 
