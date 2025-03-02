@@ -1,9 +1,50 @@
+//real time function 
+
+function currentTime() {
+    let data = new Date();
+    let hours = data.getHours();
+    let minutes = data.getMinutes();
+    let seconds = data.getSeconds();
+
+   let ans = '';
+   let amORPm = ''
+
+   if(hours>12){
+         hours = hours - 12;
+         amORPm = 'PM';
+        if(hours<10){
+            hours = '0' + hours;
+        }
+         ans +=hours;
+   }
+   else{
+         amORPm = 'AM';
+         if(hours<10){
+              hours = '0' + hours;
+         }
+         ans += hours;
+   }
+
+   if(minutes<10){
+       minutes = '0' + minutes;
+   }
+    ans += ':' + minutes;
+
+    if(seconds<10){
+        seconds = '0' + seconds;
+    }
+    ans += ':' + seconds + ' ' + amORPm;
+
+    return ans;
+
+}
+
 
 
 
 // card section 
 
-function cardBtn(id) {
+function cardBtn(id,titleid) {
 
     document.getElementById(id).addEventListener('click', function (event) {
 
@@ -32,14 +73,21 @@ function cardBtn(id) {
         //parent div
 
         let historyDiv = document.getElementById('history');
-        console.log(historyDiv);
+       
 
         //child paragraph 
 
         let historyChild = document.createElement('p');
-        historyChild.classList.add('mb-5', 'bg-[#F4F7FF]', 'rounded-xl' , 'p-2')
+        historyChild.classList.add('mb-5', 'bg-[#F4F7FF]', 'rounded-xl' , 'p-2');
+
+        //get title 
+        let title = document.getElementById(titleid).innerText;
         
-        historyChild.innerText = 'You have Complete The Task Add Dark Mode at 12:48:15 PM';
+        //get current time
+        let time = currentTime();
+        console.log(title, time);
+        
+        historyChild.innerText = `You have Complete The Task ${title} at ${time}`;
         historyDiv.appendChild(historyChild);
 
 
@@ -67,4 +115,9 @@ function randomRGBcolor() {
 
     return `rgb(${r},${g},${b})`;
 }
+
+
+
+
+
 

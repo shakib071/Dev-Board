@@ -35,12 +35,12 @@ document.getElementById('discover').addEventListener('click',
 //card section
 
 
-cardBtn('card-btn1');
-cardBtn('card-btn2');
-cardBtn('card-btn3');
-cardBtn('card-btn4');
-cardBtn('card-btn5');
-cardBtn('card-btn6');
+cardBtn('card-btn1','card-title1');
+cardBtn('card-btn2','card-title2');
+cardBtn('card-btn3','card-title3');
+cardBtn('card-btn4','card-title4');
+cardBtn('card-btn5','card-title5');
+cardBtn('card-btn6','card-title6');
 
 
 // clear history section
