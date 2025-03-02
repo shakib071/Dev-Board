@@ -34,13 +34,13 @@
         <nav class="flex justify-between items-center p-7 bg-white rounded-2xl w-[95%] mx-auto ">
           
             <div class="flex items-center">
-                <img class="mr-2" src="assets/logo.png" alt="Logo">
-                <h4 class="text-4xl">Dev<span class="font-bold">Board</span></h4>
+                <img class="mr-2 w-8 h-8 lg:w-full lg:h-full" src="assets/logo.png" alt="Logo">
+                <h4 class="text-xl lg:text-4xl ">Dev<span class="font-bold">Board</span></h4>
             </div>
             <div class="flex items-center ">
-                <img class="mr-3" src="assets/checkbox.png" alt="checkbox image">
-                <p id="task_completed" class="text-3xl mr-9 font-bold">23</p>
-                <img id="random-bg-color" class="cursor-pointer" src="assets/theme-btn.png" alt="theme button image">
+                <img class="mr-3 w-5 h-5 lg:w-full lg:h-full" src="assets/checkbox.png" alt="checkbox image">
+                <p id="task_completed" class="lg:text-3xl text-xl mr-9 font-bold ">23</p>
+                <img id="random-bg-color" class=" w-8 h-8 lg:w-full lg:h-full cursor-pointer" src="assets/theme-btn.png" alt="theme button image">
 
             </div>
             
@@ -52,38 +52,38 @@
 
         <!-- head section  -->
 
-        <section class="flex  w-[95%] mx-auto justify-between  rounded-2xl gap-5">
+        <section class="flex  w-[95%] mx-auto justify-between  rounded-2xl gap-1 lg:gap-5">
 
 
 
-            <div class="bg-white flex items-center gap-5 p-10 rounded-2xl w-[25%]">
+            <div class="bg-white flex items-center gap-1 lg:gap-5 p-2 lg:p-10 rounded-2xl w-[25%]">
                 <div>
                     <img src="assets/checkbox.png" alt="checkbox image">
                 </div>
                 <div>
-                    <p class="text-lg">Task Assigned</p>
-                    <p id="task_assigned" class="font-bold text-3xl">06</p>
+                    <p class="text-sm lg:text-lg">Task Assigned</p>
+                    <p id="task_assigned" class="font-bold text-lg lg:text-3xl">06</p>
                 </div>
             </div>
 
 
-            <div id="discover" class="cursor-pointer bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-center gap-5 rounded-2xl p-10 w-[50%] text-white">
+            <div id="discover" class="cursor-pointer bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-center gap-1 lg:gap-5 rounded-2xl p-3 lg:p-10 w-[40%] lg:w-[50%] text-white">
                 <div>
-                    <img src="assets/board.png" alt="checkbox image">
+                    <img class="w-6 h-6 lg:w-full lg:h-full" src="assets/board.png" alt="checkbox image">
                 </div>
                 <div class="">
-                    <p class="text-2xl">Discover Something <br>New Today!</p>
+                    <p class="text-sm lg:text-2xl">Discover Something <br>New Today!</p>
                     
                 </div>
             </div>
 
 
-            <div class="bg-white flex items-center gap-5 rounded-2xl p-10 w-[25%]">
+            <div class="bg-white flex items-center gap-1 lg:gap-5 rounded-2xl p-3 lg:p-10 w-[35%] lg:w-[25%]">
                 <div>
-                    <img src="assets/calender.png" alt="checkbox image">
+                    <img class="w-6 h-6 lg:w-full lg:h-full" src="assets/calender.png" alt="Chalender image">
                 </div>
                 <div>
-                    <p id="day-name" class="text-2xl"></p>
+                    <p id="day-name" class="text-sm lg:text-2xl"></p>
                     <p id="date" class="font-bold"></p>
                 
                 </div>
@@ -97,11 +97,11 @@
 
         <section class="w-[95%] mx-auto mt-8">
 
-            <div class="flex gap-5">
+            <div class="lg:flex  gap-5">
 
             <!-- card section  -->
 
-                <div class="grid grid-cols-3 gap-5">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-5">
 
                     <div class=" bg-white p-10 rounded-2xl">
                         <p class="text-xl mb-4 px-4 py-2 rounded-lg bg-[#F4F7FF] w-[45%]">ShopEase</p>
@@ -202,14 +202,14 @@
 
                 <!-- activity log section  -->
 
-                <div class="bg-white p-10 rounded-2xl w-[30%]">
+                <div class="bg-white p-10 rounded-2xl lg:w-[30%]">
 
                     <div class="flex justify-center items-center gap-6 mb-6">
                         <img src="assets/activity.png" alt="activity image">
                         <p class="text-2xl font-bold ">Activity Log</p>
                     </div>
 
-                    <button id="clear-history" class="text-center  text-white  text-xl bg-[#3752FD] p-3 rounded-xl mx-10 mb-8">Clear History</button>
+                    <button id="clear-history" class="text-center  text-white  text-xl bg-[#3752FD] p-3 rounded-xl mx-20 lg:mx-10 mb-8">Clear History</button>
 
                   
                     <div id="history" class=" grid gap-4">
